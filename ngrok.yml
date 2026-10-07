@@ -1,0 +1,22 @@
+# =============================================================================
+# ngrok Configuration - Patient Healthcare Blockchain
+# =============================================================================
+# This configuration exposes the local Ganache RPC through an HTTPS endpoint
+# so that MetaMask on remote machines can connect to the blockchain.
+#
+# Usage:
+#   1. Start Ganache: npm run blockchain
+#   2. Start ngrok: ngrok start ganache-rpc
+#   3. Update frontend/.env.local with the ngrok HTTPS URL
+#   4. Restart the frontend dev server
+#
+# The ngrok URL changes on each restart unless you have a static domain.
+# Update VITE_RPC_URL in frontend/.env.local whenever the ngrok URL changes.
+# =============================================================================
+
+version: "2"
+tunnels:
+  ganache-rpc:
+    addr: 7548
+    proto: http
+    inspect: false

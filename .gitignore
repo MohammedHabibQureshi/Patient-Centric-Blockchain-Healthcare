@@ -1,0 +1,146 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Build outputs
+dist/
+build/
+**/dist/
+**/build/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Database
+*.sqlite
+*.db
+postgresql/data/
+
+# Blockchain
+blockchain/ganache-data/
+contracts/artifacts/
+contracts/cache/
+contracts/contracts.json
+contracts/typechain-types/
+
+# Storage
+backend/storage/
+backend/uploads/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Test
+*.test.ts
+*.spec.ts
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Production
+.env.production
+.env.development
+.env.test
+!.env.example
+!**/.env.example
+
+# -----------------------------------------------------------------------------
+# Privacy / Secrets / API keys - NEVER commit these
+# -----------------------------------------------------------------------------
+
+# Local scratch files containing hardcoded credentials / private keys
+test-query.js
+run.txt
+*_keys.txt
+private-keys.txt
+ganache-keys.txt
+secrets.txt
+
+# Generic secret / credential files
+*.secret
+secrets.json
+credentials.json
+serviceAccount*.json
+service-account*.json
+auth.json
+*token*.json
+config/secrets/
+.secrets/
+
+# Private keys & certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.asc
+*.gpg
+*.ppk
+id_rsa*
+id_ed25519*
+*.skey
+wallet*.json
+keystore/
+UTC--*
+.gnupg/
+
+# Patient data / PII / PHI
+storage/
+**/storage/
+**/uploads/
+uploads/
+*.enc
+contracts/initialization.json
+*_patients.csv
+*_records.csv
+database/data/
+pgdata/
+postgres-data/
+*.dump
+*.sql.gz
+*.backup
+
+# Logs (may contain tokens, PII, request data)
+logs/
+**/logs/
+ngrok.log
+*.ngrok.log
+
+# Blockchain local / sensitive data
+**/ganache-data/
+ganache-db/
+chain-data/
+chain_data/
+wallets/
+
+# ngrok (may contain authtoken / tunnel URLs)
+.ngrok/
+.ngrok.log

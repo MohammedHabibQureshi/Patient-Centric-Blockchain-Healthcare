@@ -1,0 +1,27 @@
+{
+  "name": "patient-healthcare-blockchain",
+  "version": "1.0.0",
+  "description": "Patient-Centric Blockchain Healthcare Data Sharing System",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "contracts"
+  ],
+  "scripts": {
+    "blockchain": "cd blockchain && start-ganache.bat",
+    "deploy": "cd contracts && npx hardhat run scripts/deploy.ts --network localhost",
+    "server": "cd backend && npm run dev",
+    "dev": "cd frontend && npm run dev -- --host 0.0.0.0",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../contracts && npm install",
+    "test": "cd contracts && npx hardhat test && cd ../backend && npm test && cd ../frontend && npm test",
+    "db:init": "cd backend && npm run db:init"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
